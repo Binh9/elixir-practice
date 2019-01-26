@@ -18,10 +18,11 @@ defmodule PracticeWeb.PageControllerTest do
 
   test "factor 255", %{conn: conn} do
     conn = post conn, "/factor", %{"x" => "255"}
-    assert html_response(conn, 200) =~ "17"
+    resp = html_response(conn, 200)
+    IO.puts resp
+    assert resp =~ "17"
   end
 
-  # TODO: Write a controller test for palindrome.
   test "palindrome anna", %{conn: conn} do
     conn = post conn, "/palindrome", %{"x" => "anna"}
     assert html_response(conn, 200) =~ "true"

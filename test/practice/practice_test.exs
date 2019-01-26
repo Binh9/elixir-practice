@@ -11,6 +11,7 @@ defmodule Practice.PracticeTest do
 
   test "factor some numbers" do
     assert factor(5) == [5]
+    assert factor(7) == [7]
     assert factor(8) == [2,2,2]
     assert factor(12) == [2,2,3]
     assert factor(226037113) == [3449, 65537]
@@ -27,11 +28,11 @@ defmodule Practice.PracticeTest do
     assert calc("8 + 5 * 3") == 23
   end
 
-  # TODO: Add two unit tests for palindrome.
   test "test for palindrome" do
     assert palindrome("anna") == true
     assert palindrome("mom") == true
     assert palindrome("refer") == true
     assert palindrome("trace") == false
+    assert palindrome("mirror") == false
   end
 end
