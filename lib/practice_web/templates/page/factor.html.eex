@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="column">
+    <p><%= link "← go back", to: "/" %></p>
+    <h2>Factor it!</h2>
+
+    <p>x = <%= @x %></p>
+    <p>Factor = <%= inspect(@y) %></p>
+  </div>
+</div>
